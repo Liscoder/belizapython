@@ -1,0 +1,253 @@
+[
+	{
+		"title" : "Mensaje de bienvenida",
+		"content" : "Hola, {first_name} me complace ayudarte",
+		"context" : "welcome",
+		"type" : "common",
+		"order" : 3,
+		"format":true,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Mensaje de bienvenida",
+		"content" : "Hola, nos complace ayudarte otra vez",
+		"context" : "welcome",
+		"type" : "common",
+		"order" : 2,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Obtener preferencias",
+		"content" : "Antes de comenzar necesito recabar cierta informacion",
+		"context" : "welcome",
+		"type" : "common",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{ 
+		"title" : "Obtener preferencias",
+		"content" : "De que te gustaria hablar",
+		"context" : "welcome",
+		"type" : "common",
+		"order" : 4,
+		"identifier" : "set_preference",
+		"type_message" : "quick_replies",
+		"replies" : [
+			{
+				"title" : "Tarjeta",
+				"payload" : "TARJETA"
+			},
+			{
+				"title" : "Horarios",
+				"payload" : "HORARIOS"
+			},
+			{
+				"title" : "Oficinas",
+				"payload" : "OFICINAS"
+			},
+			{
+				"title" : "Beneficios",
+				"payload" : "BENEFICIOS"
+			},
+			{
+				"title" : "Localizacion",
+				"payload" : "LOCALIZACION"
+			}
+			{
+				"title" : "Otros",
+				"payload" : "OTROS"
+			}
+		]
+
+	},
+	{
+		"title" : "TARJETA",
+		"content" : "El clima esta loco",
+		"type" : "quick_replies",
+		"context" : "TARJETA",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "HORARIOS",
+		"content" : "El horario del banco es de 8:00 am a 6:00 pm",
+		"type" : "quick_replies",
+		"context" : "HORARIOS",
+		"order" : 2,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "OFICINAS",
+		"content" : "Te comento que puedo indicarte una tienda cercana siempre y cuando me des tu direccion",
+		"type" : "quick_replies",
+		"context" : "OFICINAS",
+		"order" : 3,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "OFICINAS",
+		"content" : "Te ayudare si me das tu locacion",
+		"type" : "quick_replies",
+		"context" : "OFICINAS",
+		"order" : 4,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "OFICINAS",
+		"content" : "Selecciona tu locacion",
+		"type" : "quick_replies",
+		"context" : "OFICINAS",
+		"order" : 5,
+		"type_message" : "quick_replies_location"
+	}
+	{
+		"title" : "BENEFICIOS",
+		"content" : "El horario del banco es de 8:00 am a 6:00 pm",
+		"type" : "quick_replies",
+		"context" : "BENEFICIOS",
+		"order" : 5,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "LOCALIZACION",
+		"content" : "Podrias darme tu localizacion",
+		"type" : "quick_replies",
+		"context" : "LOCALIZACION",
+		"order" : 6,
+		"type_message" : "text_message"
+	}
+	{
+		"title" : "OTROS",
+		"content" : " Entonces podría ayudarte en otro tema",
+		"type" : "quick_replies",
+		"context" : "OTROS",
+		"order" : 7,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Clima completado",
+		"content" : "Actualmente {city} se encuentra a {temperature}",
+		"type" : "specific",
+		"context" : "temperature",
+		"order" : 1,
+		"format" : true,
+		"data_model" : true,
+		"type_message" : "text_message"
+
+	},
+	{
+		"title" : "Clima completado",
+		"content" : ":D",
+		"type" : "Done",
+		"context" : "location",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Ayuda",
+		"content" : "Si necesitas contactar con un especialista escribe 'contacto desarrollador'",
+		"type" : "help",
+		"context" : "help",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Contacto con el desarrollador",
+		"content" : "Contacto",
+		"type" : "develop",
+		"context" : "develop",
+		"order" : 1,
+		"type_message" : "template",
+		"template_type" : "generic",
+		"elements" : [
+						{
+							"title": "Eliza",
+							"subtitle": "Página web",
+							"item_url": "https://interbank.pe/",
+							"image_url": "http://www.turismope.com/wp-content/uploads/26161_115006981862133_1512833_n.jpg",
+							"buttons": [
+							{
+								"type": "web_url",
+								"url": "https://interbank.pe/",
+								"title" :"web"
+								},
+							{
+								"type": "web_url",
+								"url": "https://interbank.pe/",
+								"title" :"facebook"
+								},
+							{
+								"type": "postback",
+								"payload": "PRUEBA",
+								"title" :"Boton de prueba"
+								},
+							]
+						}
+		]
+	},
+	{
+		"title" : "Ayuda",
+		"content" : "No dudes en contactarnos ",
+		"type" : "develop",
+		"context" : "develop",
+		"order" : 2,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Mensaje no encontrado",
+		"content" : "Lo siento, no puedo comprender lo que dices :/",
+		"type" : "not_found",
+		"context" : "not_found",
+		"order" : 1,
+		"type_message" : "text_message"
+
+	},
+	{
+		"title": "Regreso",
+		"content" : "Hola {first_name} es bueno tenerte de regreso :) ",
+		"context" : "return_user",
+		"type" : " specific",
+		"order" : 1,
+		"format" : true,
+		"type_message" : "text_message"
+
+	},
+	{
+		"title": "Mensaje no encontrado",
+		"content" : "Recuerda {first_name} que siempre estaré para ayudarte :) ",
+		"context" : "remainer",
+		"type" : " remainer",
+		"order" : 1,
+		"type_message" : "text_message"
+
+	},
+	{
+		"title": "postback",
+		"content" : "Ahora ya se postback  ",
+		"context" : "PRUBA",
+		"type" : " postback",
+		"order" : 1,
+		"format" : true,
+		"type_message" : "text_message"
+
+	},
+	{
+		"title" : "Imagen random",
+		"content" : "",
+		"context" : "common",
+		"type" : "image",
+		"order" : 1,
+		"url": "http://i.imgur.com/ZTYrvDI.png",
+		"type_message" : "image"
+	},
+	{
+		"title" : "Video random",
+		"content" : "",
+		"context" : "common",
+		"type" : "video",
+		"order" : 1,
+		"url": "http://techslides.com/demos/sample-videos/small.mp4",
+		"type_message" : "video"
+	}
+
+]
